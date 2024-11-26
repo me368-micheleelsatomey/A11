@@ -2,29 +2,32 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    width: 98%;
-    max-width: 960px;
     margin: 0 auto;
+    padding: 0;
+    max-width: 960px; /* Center the content */
+    width: 98%;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
     text-align: center;
     background-color: #800000;
     color: white;
-    padding: 10px 0;
+    padding: 15px;
 }
 
 header img {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto 10px;
 }
 
 header h2 {
-    margin: 0;
+    margin: 5px 0;
     font-size: 1.8em;
+    font-weight: bold;
 }
 
 header h3 {
@@ -36,34 +39,34 @@ header h3 {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     text-align: center;
     background-color: #800000;
-    margin: 0;
 }
 
 nav ul li {
     display: inline-block;
-    margin: 0;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     display: inline-block;
+}
+
+nav ul li:hover ul {
+    display: block;
 }
 
 nav ul li ul {
     display: none;
     position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
     list-style: none;
-    padding: 10px;
-}
-
-nav ul li:hover ul {
-    display: block;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
 }
 
 nav ul li ul li {
@@ -77,7 +80,6 @@ nav ul li ul li {
 /* Main Content */
 main {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -119,7 +121,7 @@ footer {
     margin-top: 20px;
 }
 
-/* Responsive Design: Mobile Screens */
+/* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
         display: none; /* Hide the desktop menu */
@@ -133,21 +135,17 @@ footer {
         flex-direction: column; /* Stack content vertically */
     }
 
+    section, aside {
+        width: 100%;
+        margin: 0;
+    }
+
     header h2 {
         font-size: 1.5em;
     }
-
-    header h3 {
-        font-size: 1em;
-    }
-
-    section, aside {
-        flex: 1;
-        margin: 0;
-    }
 }
 
-/* Responsive Design: Small Phones */
+/* Smaller Phones */
 @media (max-width: 480px) {
     body {
         font-size: 90%;
@@ -162,6 +160,6 @@ footer {
     }
 
     footer {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 }
