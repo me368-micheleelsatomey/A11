@@ -1,5 +1,5 @@
 /* the styles for the elements */
-/* * {
+ * {
 	margin: 0;
 	padding: 0;
 }
@@ -18,7 +18,7 @@ a:focus, a:hover {
 	font-style: italic;
 }
 /* the styles for the header */
-/*
+
 header {
 	padding: 1.5em 0 2em 0;
 	border-bottom: 3px solid #931420;
@@ -47,7 +47,7 @@ header img {
 	text-shadow: 2px 2px 2px #800000;
 }
 /* the styles for the navigation menu */
-/*
+
 #nav_menu ul {
 	list-style-type: none;
 	margin: 0;
@@ -88,7 +88,7 @@ header img {
 }
 
 /* the styles for the section */
-/*
+
 section {
 	width: 525px;
 	float: right;
@@ -120,7 +120,7 @@ section li {
 }
 
 /* the styles for the article */
-/*
+
 article {
 	padding: .5em 0;
 	border-top: 2px solid #800000;
@@ -140,7 +140,7 @@ article img {
 }
 
 /* the styles for the aside */
-/*
+
 aside {
 	width: 215px;
 	float: right;
@@ -161,7 +161,7 @@ aside img {
 }
 
 /* the styles for the footer */
-/*
+
 footer {
 	background-color: #931420;
 	clear: both;
@@ -171,119 +171,4 @@ footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
-}
-*/
-
-
-/* General Styles */
-
-body {
-    font-family: Arial, sans-serif;
-    width: 98%;
-    max-width: 960px;
-    margin: 0 auto;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-}
-
-header {
-    text-align: center;
-    background-color: #800000;
-    color: #fff;
-    padding: 10px 0;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-header p {
-    margin: 0;
-    font-size: 1.2em;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    background-color: #800000;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-}
-
-nav ul li a:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-section, aside {
-    margin: 20px 0;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #800000;
-    color: #fff;
-}
-
-/* Responsive Styles */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-    }
-
-    #mobile_menu {
-        display: block;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    header p {
-        font-size: 1em;
-    }
-
-    section, aside {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 90%;
-    }
-
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
 }
