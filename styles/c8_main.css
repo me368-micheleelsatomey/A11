@@ -1,111 +1,167 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
     width: 98%;
     max-width: 960px;
     margin: 0 auto;
-    line-height: 1.6;
-    color: #333;
     background-color: #f4f4f4;
 }
 
 header {
     text-align: center;
     background-color: #800000;
-    color: #fff;
+    color: white;
     padding: 10px 0;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
+header img {
+    max-width: 100%;
+    height: auto;
 }
 
-header p {
+header h2 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header h3 {
     margin: 0;
     font-size: 1.2em;
 }
 
+/* Navigation Menu */
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
     background-color: #800000;
+    margin: 0;
 }
 
 nav ul li {
     display: inline-block;
-    margin-right: 15px;
+    margin: 0;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
+    display: inline-block;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul li:hover ul {
     display: block;
 }
 
-nav ul li a:hover {
-    background-color: #333;
-    color: #fff;
+nav ul li ul li {
+    display: block;
 }
 
-section, aside {
-    margin: 20px 0;
-    padding: 10px;
-    background-color: #fff;
+#mobile_menu {
+    display: none;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+section {
+    flex: 2;
+    background: white;
+    padding: 20px;
     border: 1px solid #ccc;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #800000;
-    color: #fff;
+aside {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
 }
 
-/* Responsive Styles */
+blockquote {
+    font-style: italic;
+    color: #666;
+    border-left: 5px solid #800000;
+    padding-left: 10px;
+    margin: 20px 0;
+}
+
 img {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 10px 0;
 }
 
-/* Media Queries for Responsive Design */
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #800000;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Responsive Design: Mobile Screens */
 @media (max-width: 768px) {
     nav ul {
-        display: none;
+        display: none; /* Hide the desktop menu */
     }
 
     #mobile_menu {
-        display: block;
+        display: block; /* Show the mobile menu */
     }
 
-    header h1 {
-        font-size: 2em;
+    main {
+        flex-direction: column; /* Stack content vertically */
     }
 
-    header p {
+    header h2 {
+        font-size: 1.5em;
+    }
+
+    header h3 {
         font-size: 1em;
     }
 
     section, aside {
-        width: 100%;
-        margin: 10px 0;
+        flex: 1;
+        margin: 0;
     }
 }
 
+/* Responsive Design: Small Phones */
 @media (max-width: 480px) {
     body {
         font-size: 90%;
     }
 
-    header h1 {
-        font-size: 1.5em;
+    header h2 {
+        font-size: 1.2em;
     }
 
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
+    nav ul li a {
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.9em;
     }
 }
