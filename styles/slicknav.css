@@ -6,43 +6,38 @@
     position: relative;
     display: block;
     vertical-align: middle;
-    float: right;
-    padding: 0.438em 0.625em;
-    line-height: 1.125em;
+    float: left; /* Aligns button to the left for better usability */
+    padding: 10px 15px;
+    line-height: 1.2;
     cursor: pointer;
-    background-color: #800000; /* Button background color matches theme */
+    background-color: #800000; /* Dark red button background matches theme */
+    color: #ffffff; /* White button text */
     border: none;
     border-radius: 4px;
-    color: #fff;
     font-size: 16px;
     font-weight: bold;
-    text-align: center;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .slicknav_menu .slicknav_menutxt {
-    display: block;
-    line-height: 1.188em;
-    float: left;
-}
-
-.slicknav_menu .slicknav_icon {
-    float: left;
-    margin: 0.188em 0 0 0.438em;
-}
-
-.slicknav_menu .slicknav_no-text {
-    margin: 0;
+    display: inline-block;
+    line-height: 1.5;
+    color: #ffffff; /* White text for the menu button */
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .slicknav_menu .slicknav_icon-bar {
     display: block;
-    width: 1.125em;
-    height: 0.125em;
-    border-radius: 1px;
-    background-color: #fff; /* White menu bars */
-    margin: 0.188em 0;
+    width: 25px;
+    height: 4px;
+    margin: 5px 0;
+    background-color: #ffffff; /* White hamburger icon */
+    border-radius: 2px;
+}
+
+.slicknav_menu .slicknav_no-text {
+    margin: 0;
 }
 
 .slicknav_nav {
@@ -54,120 +49,74 @@
 }
 
 .slicknav_nav .slicknav_arrow {
-    font-size: 0.8em;
-    margin: 0 0 0 0.4em;
+    font-size: 0.9em; /* Slightly larger for visibility */
+    margin-left: 10px; /* Added spacing for submenu arrows */
+    color: #800000; /* Dark red for arrows */
 }
 
 .slicknav_nav .slicknav_item {
     display: block;
     cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Light gray divider for menu items */
 }
 
 .slicknav_nav a {
     display: block;
-}
-
-.slicknav_nav .slicknav_item a {
-    display: inline;
-}
-
-.slicknav_menu:before, .slicknav_menu:after {
-    content: " ";
-    display: table;
-}
-
-.slicknav_menu:after {
-    clear: both;
-}
-
-/* IE6/7 support */
-.slicknav_menu {
-    *zoom: 1;
-}
-
-/* User Default Style */
-
-/* Main SlickNav Menu */
-.slicknav_menu {
-    font-size: 16px;
-    background-color: #800000; /* Dark red background */
-    padding: 10px;
-    text-align: left;
-}
-
-/* Button */
-.slicknav_btn {
-    margin: 5px;
     text-decoration: none;
-    border-radius: 4px;
-    background-color: #800000; /* Button background */
-}
-
-/* Button Text */
-.slicknav_menu .slicknav_menutxt {
-    color: #fff; /* White text for "MENU" */
-    font-weight: bold;
-}
-
-/* Button Lines */
-.slicknav_menu .slicknav_icon-bar {
-    background-color: #fff; /* White menu bars */
-}
-
-/* Dropdown Menu */
-.slicknav_nav {
-    background-color: #800000; /* Dropdown background matches theme */
-    color: #fff; /* White text for links */
-    margin: 0;
-    padding: 0;
+    color: #800000; /* Dark red text for links */
+    padding: 10px;
     font-size: 1em;
 }
 
-.slicknav_nav ul {
-    list-style: none;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.slicknav_nav .slicknav_item {
-    padding: 10px;
-    margin: 2px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-.slicknav_nav a {
-    padding: 10px;
-    color: #fff;
-    text-decoration: none;
-    display: block;
-}
-
 .slicknav_nav a:hover {
-    background-color: #ccc; /* Light grey hover effect */
-    color: #800000; /* Dark red text on hover */
-    border-radius: 6px;
+    background-color: #800000; /* Dark red hover background */
+    color: #ffffff; /* White text on hover */
+    border-radius: 4px;
 }
 
-/* Arrow Style for Submenus */
-.slicknav_nav .slicknav_arrow {
-    color: #fff; /* White arrow */
-    margin-left: 10px;
+.slicknav_nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.slicknav_nav .slicknav_item a {
+    padding: 0;
+    margin: 0;
 }
 
 .slicknav_nav .slicknav_item:hover {
-    background: #ccc; /* Light grey for hover effect */
+    background-color: #800000; /* Dark red hover for items */
+    color: #ffffff; /* White text for hover items */
+    border-radius: 4px;
 }
 
-/* Active/Current Menu Item */
-.slicknav_nav .slicknav_item a.active {
-    background-color: #ccc; /* Light grey */
-    color: #800000; /* Dark red */
-    font-weight: bold;
-}
-
-/* Text Node Indentation for Nested Items */
 .slicknav_nav .slicknav_txtnode {
     margin-left: 15px;
 }
 
+/*
+    Adjustments for dropdowns
+*/
+
+.slicknav_nav ul {
+    margin-left: 0; /* Removes unnecessary left margin on nested lists */
+    padding: 0;
+}
+
+.slicknav_nav .slicknav_item:hover ul {
+    background-color: #ffffff; /* Submenu background color */
+}
+
+/*
+    Menu Container
+*/
+
+.slicknav_menu {
+    font-size: 16px;
+    background-color: #800000; /* Dark red menu container */
+    padding: 10px;
+    text-align: left;
+    border-radius: 4px;
+}
